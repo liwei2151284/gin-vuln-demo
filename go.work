@@ -1,0 +1,11 @@
+// [SCA场景十一] go.work workspace：覆盖 go.mod replace 指令
+// go.work 在多模块工作区中优先级高于单个 go.mod 的 replace 指令
+// stub-yaml-patched 将 CVE yaml.v2 v2.2.2 替换为内部修复版
+// → SCA 从 go.mod 报告漏洞；感知 go.work 的工具应跳过或降级
+// [与 PHP 差异] PHP 无工作区概念；go.work 是 Go 1.18 多模块特有机制
+go 1.25.0
+
+use .
+
+// 场景十一：go.work 用内部修复版替换 CVE 版 gopkg.in/yaml.v2
+use ./packages/stub-yaml-patched
