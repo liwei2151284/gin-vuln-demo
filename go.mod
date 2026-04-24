@@ -5,9 +5,7 @@ module gin-vuln-demo
 // go 指令 = 本模块要求的最低语言版本
 // toolchain 指令 = 推荐使用的工具链版本（Go 1.21 引入，两者语义分离）
 // SCA 需同时检查两个字段，不能只看 go 指令
-go 1.21
-
-toolchain go1.21.0
+go 1.25.0
 
 require (
 	// ── 场景三：测试包流入生产 ───────────────────────────────────────────
@@ -63,7 +61,7 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/gorilla/websocket v1.4.1
 	github.com/russross/blackfriday v1.6.0
-	gopkg.in/yaml.v2 v2.2.2
+	gopkg.in/yaml.v2 v2.2.8
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
